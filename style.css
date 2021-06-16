@@ -17,7 +17,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   padding: 1em;
   gap: 1em;
 }
@@ -45,4 +45,51 @@ nav a {
 .linkoff:hover {
   border-top: solid;
   color: #0065fc;
+}
+
+/* ************************* SEARCHBAR ************************* */
+#searchbar {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  font-size: 0.8em;
+}
+form {
+  display: flex;
+}
+form input {
+  font-weight: bold;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: thin;
+  outline: none;
+  height: 2.7em;
+  padding: 0.5em 0.9em;
+}
+
+.inputsearch {
+  width: 17em;
+  color: black;
+}
+.inputsubmit {
+  background-color: #0065fc;
+  color: white;
+  border-radius: 0 0.625em 0.625em 0;
+  border: none;
+  cursor: pointer;
+}
+.inputsubmit:hover {
+  transform: scale(1.05);
+  transition: 200ms;
+}
+
+.mapicon {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: thin;
+  padding: 0.5em 0.9em;
+  border-radius: 0.625em 0 0 0.625em;
+  background-color: #f2f2f2;
+  border-right: none;
+  cursor: pointer;
 }
