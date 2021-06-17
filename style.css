@@ -177,7 +177,6 @@ label:hover {
 /* ************************* MAINCONTENT ************************* */
 .maincontent {
   display: grid;
-  column-gap: 0em;
   grid-template-columns: 6.5fr 3fr;
 }
 
@@ -256,7 +255,7 @@ figcaption {
   background-color: white;
   border-radius: 0.5em;
   height: 10em;
-  width: 100%;
+  /* width: 100%; */
   max-width: 100%;
   margin: 1em;
   padding: 0.2em;
@@ -265,4 +264,63 @@ figcaption {
 }
 .Popular article:hover {
   transform: scale(1.05);
+}
+
+.Activités {
+  margin-top: 2em;
+  display: grid;
+  /* min-width: min-content; */
+  column-gap: 1em;
+  row-gap: 1em;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto repeat(8, 3em);
+  border-radius: 1em;
+}
+
+.Activités article:hover {
+  transform: scale(1.05);
+}
+
+.Activités article {
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 0.5em;
+  height: auto;
+  margin: 1em;
+  cursor: pointer;
+  box-shadow: 0 0 1em grey;
+}
+.Activités img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5em 0.5em 0 0;
+  object-fit: cover;
+}
+.Activités h1 {
+  grid-column: 1/4;
+  grid-row: 1/-10;
+}
+.largeimg1 {
+  grid-column: 1/1;
+  grid-row: 2/9;
+}
+.mediumimg1 {
+  grid-column: 2/2;
+  grid-row: 2/6;
+}
+.smallimg1 {
+  grid-column: 2/2;
+  grid-row: 6/9;
+}
+.largeimg2 {
+  grid-column: 3/3;
+  grid-row: 2/9;
+}
+.smallimg2 {
+  grid-column: 4/4;
+  grid-row: 2/5;
+}
+.mediumimg2 {
+  grid-column: 4/4;
+  grid-row: 5/9;
 }
