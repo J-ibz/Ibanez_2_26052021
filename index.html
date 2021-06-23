@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Reservia</title>
@@ -12,9 +13,11 @@
     <header>
       <nav>
         <img class="logo" src="/images/logo/Reservia@3x.png" alt="Logo brand" />
-        <a class="activelink" href="#Hébergements">Hébérgements</a>
-        <a class="linkoff" href="#Activités">Activités</a>
-        <a href="#"><b>S'inscrire</b></a>
+        <div class="menunav">
+          <a class="activelink" href="#Hébergements">Hébérgements</a>
+          <a class="linkoff" href="#Activités">Activités</a>
+        </div>
+        <a class="subscription" href="#"><b>S'inscrire</b></a>
       </nav>
 
       <!--********** SEARCH BAR **********-->
@@ -25,26 +28,32 @@
         <form>
           <button class="mapicon"><i class="fas fa-map-marker-alt"></i></button>
           <input class="inputsearch" type="search" placeholder="Marseille, France..." />
-          <input class="inputsubmit" type="submit" value="Rechercher" />
+          <!-- <input class="inputsubmit" type="submit" value="Rechercher" /> -->
+          <button class="inputsubmit" type="submit">
+            <span class="inputsubmittext">Rechercher</span>
+            <i class="searchFormSubmitinputIcon fas fa-search"></i>
+          </button>
         </form>
       </section>
 
       <!--********** FILTER BAR **********-->
       <section class="filterbar">
         <p>Filtres</p>
+        <div class="forquery1">
+          <input id="toggle1" type="checkbox" />
+          <label for="toggle1" i class="fas fa-money-bill-wave"><span>Economique</span></label>
 
-        <input id="toggle1" type="checkbox" />
-        <!--Pour qu'ils soient tous indépendant-->
-        <label for="toggle1" i class="fas fa-money-bill-wave"><span>Economique</span></label>
+          <input id="toggle2" type="checkbox" />
+          <label for="toggle2" i class="fa solid fa-child"><span>Familial</span></label>
+        </div>
 
-        <input id="toggle2" type="checkbox" />
-        <label for="toggle2" i class="fa solid fa-child"><span>Familial</span></label>
+        <div class="forquery2">
+          <input id="toggle3" type="checkbox" />
+          <label for="toggle3" i class="fa solid fa-heart"><span>Romantique</span></label>
 
-        <input id="toggle3" type="checkbox" />
-        <label for="toggle3" i class="fa solid fa-heart"><span>Romantique</span></label>
-
-        <input id="toggle4" type="checkbox" />
-        <label for="toggle4" i class="fa fa-dog"><span>Animaux autorisés</span></label>
+          <input id="toggle4" type="checkbox" />
+          <label for="toggle4" i class="fa fa-dog"><span>Animaux autorisés</span></label>
+        </div>
       </section>
       <div class="searchresult">
         <p><i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
@@ -149,11 +158,13 @@
       <!--*************** ASIDE ***************-->
 
       <aside class="Popular">
-        <h1>Les plus populaires <i class="fas fa-chart-line"></i></h1>
+        <h1>
+          Les plus populaires <a href="#"><i class="fas fa-chart-line"></i></a>
+        </h1>
         <article>
           <img src="/images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" label="" />
-          <div class="txtvignette">
-            <figcaption>Auberge la Cannebière</figcaption>
+          <div class="txtvignettePopular">
+            <figcaption>Hôtel Le soleil du matin</figcaption>
             <p>Nuit à partir de <b>128€</b></p>
             <div class="starsicons">
               <span class="active"><i class="fas fa-star"></i></span>
@@ -167,8 +178,8 @@
 
         <article>
           <img src="/images/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.jpg" label="" />
-          <div class="txtvignette">
-            <figcaption>Auberge la Cannebière</figcaption>
+          <div class="txtvignettePopular">
+            <figcaption>Au coeur de l'eau Chambre d'hôtes</figcaption>
             <p>Nuit à partir de <b>71€</b></p>
             <div class="starsicons">
               <span class="active"><i class="fas fa-star"></i></span>
@@ -182,8 +193,8 @@
 
         <article>
           <img src="/images/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg" label="" />
-          <div class="txtvignette">
-            <figcaption>Auberge la Cannebière</figcaption>
+          <div class="txtvignettePopular">
+            <figcaption>Hôtel Tout bleu et Blanc</figcaption>
             <p>Nuit à partir de <b>68€</b></p>
             <div class="starsicons">
               <span class="active"><i class="fas fa-star"></i></span>
